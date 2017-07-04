@@ -26,13 +26,13 @@ class ParticipateInForum extends TestCase
     {
         // == Plan ==
         // Given we have an authenticated user
-        $user = factory('App\User')->create();
+        $user = create('App\User');
         $this->be($user);
         // And an existing thread
-        $thread = factory('App\Thread')->create();
+        $thread = create('App\Thread');
 
         // When the user adds a reply to the thread
-        $reply = factory('App\Reply')->make();
+        $reply = make('App\Reply');
         // simulate them hitting the 'submit' button.
         $this->post($thread->path() . '/replies', $reply->toArray());
         // Then their reply should be visible on the pate.
