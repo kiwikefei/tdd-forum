@@ -10,6 +10,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class ParticipateInForum extends TestCase
 {
     use DatabaseMigrations;
+
     /** @test */
     public function unauthenticated_users_may_not_add_replies()
     {
