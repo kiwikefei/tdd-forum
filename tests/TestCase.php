@@ -31,6 +31,8 @@ abstract class TestCase extends BaseTestCase
         });
     }
 
+    // Exception Handler will take effect =>
+    // redirect()/ render()/ report()...will be enabled
     protected function withExceptionHandling()
     {
         $this->app->instance(ExceptionHandler::class, $this->oldExceptionHandler);
